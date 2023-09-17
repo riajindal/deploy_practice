@@ -3,7 +3,7 @@ import os
 import sys
 from definition import ROOT_PATH
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(ROOT_PATH))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Add the project root to the Python path
 sys.path.insert(0, PROJECT_ROOT)
 print(PROJECT_ROOT)
