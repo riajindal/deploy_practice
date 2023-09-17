@@ -4,3 +4,4 @@ pandas
 numpy
 selenium
 dash-bootstrap-components
+gunicorn
