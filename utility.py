@@ -3,10 +3,9 @@ import os
 import sys
 from definition import ROOT_PATH
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(ROOT_PATH))
 # Add the project root to the Python path
 sys.path.insert(0, PROJECT_ROOT)
-print(PROJECT_ROOT)
 
 bank_list_priv = [Bank(r'data_extraction\hdfc_slabs.csv', 'HDFC', 'HDFCBANK.NS'),
                   Bank(r'kotak_slabs.csv', 'KOTAK', 'KOTAKBANK.NS'),
