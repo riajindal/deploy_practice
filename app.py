@@ -76,4 +76,4 @@ port = find_available_port()
 print(f"Available port: {port}")
 
 # Use the port variable in your Dash app configuration
-app.run_server(debug=False, port=port)
+app.run_server(debug=False)
