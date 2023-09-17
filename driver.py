@@ -11,7 +11,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(ROOT_PATH))
 # print(os.getcwd())
 
 # Extract data from PaisaBazaar website in respective directory i.e. data_extraction
-subprocess.run(['python', r'data_extraction\index.py'])
+subprocess.run(['python', r'data_extraction/index.py'])
 
 # Create bucketed data master sheet
 # 1. Create general format for bucket_master.csv
@@ -33,7 +33,7 @@ bucket_master.to_csv('bucket_master.csv', mode='w', index=False)
 
 # Extract bank historical data for future use
 # subprocess.run(['python', r'data_analysis\banks_historical_data.py'])
-subprocess.run(['python', r'bank_historical_data\extract_historical.py'])
+subprocess.run(['python', r'bank_historical_data/extract_historical.py'])
 
 # Revenue Extraction from Yahoo Financials
 subprocess.run(['python', r'extract_revenue.py'])
