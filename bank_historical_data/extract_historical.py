@@ -3,9 +3,9 @@ import sys
 import pandas as pd
 from utility import master
 from datetime import datetime, timedelta, date
+from definition import ROOT_PATH
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(r'C:\Users\riaji\PycharmProjects\deposit_project'))
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(ROOT_PATH))
 # Add the project root to the Python path
 # for saving and running files in appropriate directories
 sys.path.insert(0, PROJECT_ROOT)

@@ -6,9 +6,9 @@ import plotly.express as px
 from dash import html, dcc, callback, Input, Output
 from datetime import date, datetime
 from utility import master
+from definition import ROOT_PATH
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(r'C:\Users\riaji\PycharmProjects\deposit_project'))
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(ROOT_PATH))
 # Add the project root to the Python path
 sys.path.insert(0, PROJECT_ROOT)
 
@@ -52,7 +52,7 @@ layout = html.Div(id='div', children=[
      Input(component_id='banks', component_property='value')]
 )
 def update_graph(none, start_date, end_date, banks):
-    files = os.listdir('../bank_historical_data')
+    files = os.listdir('bank_historical_data')
     historical_files = [file_name for file_name in files if file_name.startswith("historical")]
     df_data = []
 
@@ -65,7 +65,7 @@ def update_graph(none, start_date, end_date, banks):
     # Get the max rate for a date to plot in the
     # form of an array of the max values for each bank
     def get_max_rates(filename):
-        data = pd.read_csv(f'../bank_historical_data/{filename}')
+        data = pd.read_csv(f'bank_historical_data/{filename}')
         max_rates = data.iloc[:, :].max()
         return max_rates
 
